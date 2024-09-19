@@ -1,11 +1,14 @@
 
 
-   document.getElementById('totalValue').focus(); 
+  
+   
 
     function calculateTax() {
         // Get the values from the input fields
         const totalValue = parseFloat(document.getElementById('totalValue').value);
         const taxRate = parseFloat(document.getElementById('taxRate').value);
+                
+
        
         
       
@@ -27,6 +30,11 @@
                       document.getElementById('result-totalf').value = 0;
                       return;
                   }
+
+                  
+                  document.getElementById('result').style.display = "block";
+                  document.getElementById('block').style.height = "550px";
+
         // Calculate the tax amount
       
       
@@ -42,11 +50,13 @@
         }
       
         else {
-          const taxAmount = (totalValue / (taxRate+totalValue)) * taxRate;
+          const taxAmount = (totalValue / (taxRate+100)) * taxRate;
         document.getElementById('result-total').value = (totalValue-taxAmount).toLocaleString(3);
         document.getElementById('result-tax').value = (taxAmount).toLocaleString(3);
         document.getElementById('result-totalf').value = (totalValue).toLocaleString(3);
         }
+
     }
 
- 
+
+                  

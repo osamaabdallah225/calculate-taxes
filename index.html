@@ -13,7 +13,7 @@
 <body>
     <div class="content">
         <p style="text-align: center; font-weight: bold; color: white; margin-bottom: 25px;">حساب قيمة الضريبة المضافة للمنتج</p>
-        <div class="block">
+        <div id="block">
             <p>هل البيع غير شامل لضريبة القيمة المضافة؟</p>
             <form action="">
                 <div>
@@ -25,14 +25,14 @@
                 </div>
              
                 <p>القيمة الإجمالية</p>
-                <input  id="totalValue" type="number" required min="1"  >
+                <input  id="totalValue" type="number" required min="1" placeholder="ادخل القيمة" >
                 <p >نسبة ضريبة القيمة المضافة (%)</p>
-                <input  id="taxRate" type="number" required  min="1">
+                <input  id="taxRate" type="number" required  min="1" placeholder="ادخل نسبة الضريبة">
                 <br>
                 <button type="button" onclick="calculateTax()" >عرض قيمة الضريبة</button>
             </form>
 
-            <div class="result" style="margin-top: 30px;">
+            <div id="result" style="margin-top: 30px;">
 
                 <div class="cal">
                     <p id="totalAfterTax" >الاجمالي قبل الضريبة</p>
@@ -63,6 +63,7 @@
 
 
 <script>   document.getElementById('totalValue').focus(); 
+
 </script>
 </body>
 </html>
