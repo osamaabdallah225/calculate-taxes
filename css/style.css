@@ -83,8 +83,8 @@ outline: none;
  @media (max-width: 500px) {
   .block {
     width: 340px;
-    padding: 20px 20px 0px ;
-    height: 100%;
+    padding: 20px 20px 20px ;
+    /* height: 100%; */
    }
    button {
     width: 100%;
