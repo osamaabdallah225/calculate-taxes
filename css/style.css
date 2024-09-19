@@ -82,8 +82,9 @@ outline: none;
 
  @media (max-width: 500px) {
   .block {
-    width: 390px;
-    padding: 30px 10px 0px ;
+    width: 370px;
+    padding: 20px 20px 0px ;
+    height: 100%;
    }
    button {
     width: 100%;
@@ -93,9 +94,25 @@ outline: none;
    }
    input[type="text"] {
    margin-right: 20px;
+   width: 150px;
    }
    #result-tax {
-    margin-right: 116px !important;
+
+    margin: 0px !important;
+    
+   }
+   
+  .cal > p {
+    margin: 0px 0px 10px 18px;
+    width: 160px;
+    
+   }
+  .cal > input {
+    margin: 0px;
+    
+   }
+   .cal {
+    padding-bottom: 10px;
    }
 }
 
