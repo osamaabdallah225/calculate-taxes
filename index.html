@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="icon" href="image/333.jpg">
+    <script src="js/js.js"></script>
+    <title>Calculate tax</title>
+</head>
+<body>
+    <div class="content">
+        <p style="text-align: center; font-weight: bold; color: white; margin-bottom: 25px;">حساب قيمة الضريبة المضافة للمنتج</p>
+        <div class="block">
+            <p>هل البيع غير شامل لضريبة القيمة المضافة؟</p>
+            <form action="">
+                <div>
+                    
+                    <input id="yes" type="radio" name="choice" checked>
+                    <label style="padding-left: 20px;" for="yes" >نعم</label>
+                    <input id="no" type="radio" name="choice" >
+                    <label for="no">لا</label>
+                </div>
+             
+                <p>القيمة الإجمالية</p>
+                <input  id="totalValue" type="number" required min="1"  >
+                <p >نسبة ضريبة القيمة المضافة (%)</p>
+                <input  id="taxRate" type="number" required  min="1">
+                <br>
+                <button type="button" onclick="calculateTax()" >عرض قيمة الضريبة</button>
+            </form>
+
+            <div class="result" style="margin-top: 30px;">
+
+                <div class="cal">
+                    <p id="totalAfterTax" >الاجمالي قبل الضريبة</p>
+                    <input id="result-total" type="text"  value="0"  readonly>
+                </div>
+
+                <div class="cal">
+                    <p  id="taxAmount"> الضريبة</p>
+                    <input id="result-tax" style="margin-right: 145px;" type="text"  value="0" readonly>
+                </div>
+
+                <div class="cal">
+                    <p id="totalBeforeTax">الاجمالي بعد الضريبة</p>
+                    <input id="result-totalf" type="text" value="0"  readonly>
+                </div>
+
+             
+               
+        </div>
+    </div>
+</div>
+   
+
+  
+<div class="coded" style="color: white;position: fixed;bottom: 0; right: 20px;" >
+    <p>coded by Osama Abdallah</p>
+</div>
+
+
+<script>   document.getElementById('totalValue').focus(); 
+</script>
+</body>
+</html>

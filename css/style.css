@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  direction: rtl;
+}
+body{
+    font-family: "Droid Arabic Kufi" , sans-serif;
+    background-image: url("../image/cal.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: end;
+}
+ .content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 2; */
+ }
+ .block {
+  width: 500px;
+  height: 550px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 20px 1px #bfbec4;
+  padding: 30px 30px 0px 0px;
+  background-color: rgb(241, 235, 235);
+
+ }
+ input[type="number"] {
+  outline: none;
+  height: 35px;
+  padding: 20px 10px 20px 0px;
+  box-shadow: 0px 0px 10px 0px #c8c2c2;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  width: 400px;
+
+ }
+ input[type="number"]:focus {
+  border-color: rgb(51, 51, 231);;
+  box-shadow: 0px 0px 6px 4px #c8c2c2;
+ }
+ button {
+  height: 40px;
+  background-color: #e9edf3;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px !important;
+  background-color: rgb(211, 230, 224);
+  width: 400px;
+
+
+
+ }
+ button:active {
+  
+  background-color: rgb(167, 201, 190);
+  box-shadow: 0px 0px 6px 4px #c8c2c2;
+ }
+
+ .cal {
+  display: flex;
+ }
+
+ input[type="text"] {
+  width: 200px;
+  height: 40px;
+ margin-right: 50px;
+ /* background-color: #f3f0f0; */
+ border: none;
+ text-align: center;
+
+ }
+ input[type="text"]:focus {
+ border: none;
+outline: none;
+ }
+
+
+ /* start responsive for small phone */
+
+ @media (max-width: 500px) {
+  .block {
+    width: 390px;
+    padding: 30px 10px 0px ;
+   }
+   button {
+    width: 100%;
+   }
+   input[type="number"] {
+    width: 100%;
+   }
+   input[type="text"] {
+   margin-right: 20px;
+   }
+   #result-tax {
+    margin-right: 116px !important;
+   }
+}
+
+/*end  responsive for small phone */
+
+@font-face {
+  font-family: "Droid Arabic Kufi";
+  src: url("../font.ttf");
+}
+
