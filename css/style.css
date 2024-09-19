@@ -81,6 +81,13 @@ outline: none;
  /* start responsive for small phone */
 
  @media (max-width: 500px) {
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+   }
   
   .block {
     width: 343px;
