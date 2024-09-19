@@ -81,10 +81,11 @@ outline: none;
  /* start responsive for small phone */
 
  @media (max-width: 500px) {
+  
   .block {
     width: 343px;
     padding: 20px 20px 20px ;
-    height: 100vh;
+    height: 100%;
    }
    button {
     width: 100%;
