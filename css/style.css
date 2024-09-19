@@ -9,6 +9,7 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     background-position: end;
+    overflow: hidden;
 }
  .content {
   position: absolute;
@@ -87,7 +88,7 @@ outline: none;
  @media (max-width: 500px) {
   .content {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     
