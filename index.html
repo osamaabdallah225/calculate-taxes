@@ -29,7 +29,7 @@
                 <p >نسبة ضريبة القيمة المضافة (%)</p>
                 <input  id="taxRate" type="number" required  min="1" placeholder="ادخل نسبة الضريبة">
                 <br>
-                <button type="button" onclick="calculateTax()" >عرض قيمة الضريبة</button>
+                <button id="button" type="button" onclick="calculateTax()" >عرض قيمة الضريبة</button>
             </form>
 
             <div id="result" style="margin-top: 30px;">
@@ -40,8 +40,8 @@
                 </div>
 
                 <div class="cal">
-                    <p  id="taxAmount"> الضريبة</p>
-                    <input id="result-tax" style="margin-right: 145px;" type="text"  value="0" readonly>
+                    <p  id="taxAmount"> ضريبة القيمة المضافة</p>
+                    <input id="result-tax" style="margin-right: 43px;" type="text"  value="0" readonly>
                 </div>
 
                 <div class="cal">
@@ -63,6 +63,7 @@
 
 
 <script>   document.getElementById('totalValue').focus(); 
+    
 
 </script>
 </body>
