@@ -18,16 +18,16 @@
             <form action="">
                 <div>
                     
-                    <input id="yes" type="radio" name="choice" checked>
+                    <input id="yes" type="radio" name="choice" checked onclick="myFunction()">
                     <label style="padding-left: 20px;" for="yes" >نعم</label>
-                    <input id="no" type="radio" name="choice" >
+                    <input id="no" type="radio" name="choice" onclick="myFunction()">
                     <label for="no">لا</label>
                 </div>
              
                 <p>القيمة الإجمالية</p>
-                <input  id="totalValue" type="number" required min="1" placeholder="ادخل القيمة" >
+                <input  id="totalValue" type="number" required min="1" placeholder="ادخل القيمة" onkeyup="myFunction()" >
                 <p >نسبة ضريبة القيمة المضافة (%)</p>
-                <input  id="taxRate" type="number" required  min="1" placeholder="ادخل نسبة الضريبة">
+                <input  id="taxRate" type="number" required  min="1" placeholder="ادخل نسبة الضريبة" value="15" onkeyup="myFunction()">
                 <br>
                 <button id="button" type="button" onclick="calculateTax()" >عرض قيمة الضريبة</button>
             </form>
