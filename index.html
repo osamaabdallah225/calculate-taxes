@@ -27,7 +27,19 @@
                 <p>القيمة الإجمالية</p>
                 <input  id="totalValue" type="number" required min="1" placeholder="ادخل القيمة" onkeyup="myFunction()" >
                 <p >نسبة ضريبة القيمة المضافة (%)</p>
-                <input  id="taxRate" type="number" required  min="1" placeholder="ادخل نسبة الضريبة" value="15" onkeyup="myFunction()">
+
+
+               <div style="display: inline-block;position: relative;">
+
+
+                <input id="taxRate" type="number" required  min="1" placeholder="ادخل نسبة الضريبة" value="15" onkeyup="myFunction()"  >
+                <span style="position: absolute;left: 20px;top: 15px; font-weight: bold;">%</span>
+                
+               </div>
+
+
+               
+             
                 <br>
                 <button id="button" type="button" onclick="calculateTax()" >عرض قيمة الضريبة</button>
             </form>
