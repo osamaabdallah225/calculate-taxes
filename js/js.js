@@ -1,29 +1,54 @@
-
 function calculateTax(clickonbutton) {
   // Get the values from the input fields
   const totalValue = parseFloat(document.getElementById('totalValue').value);
   const taxRate = parseFloat(document.getElementById('taxRate').value);
+  const taxRateElement = document.getElementById('taxRate');
+  var totalValueElement = document.getElementById('totalValue');
  // التحقق من صحة الإدخال
  if (clickonbutton) {
   
   if (isNaN(totalValue) || totalValue <= 0) {
-    alert('الرجاء إدخال قيمة إجمالية صحيحة.');
-        //تصفير نتائج البحث 
+   
+    // alert('الرجاء إدخال قيمة إجمالية صحيحة.');
+//  لو مش محقق الشروط اللي فوق جعل الحقل احمر
+if (totalValueElement) {
+    if (totalValueElement.validity ) {
+        totalValueElement.style.border = '1px solid red'; // وضع border أحمر إذا كان الحقل غير صالح
+    }
+    // إزالة الـ border عند الكتابة في الحقل
+    totalValueElement.addEventListener('input', function() {
+        totalValueElement.style.border = ''; // إزالة الـ border عند الكتابة
+    });
+}
+
+       //تصفير نتائج البحث 
       document.getElementById('result-total').value = 0;
       document.getElementById('result-tax').value = 0;
       document.getElementById('result-totalf').value = 0;
-      return;
+      
   }
 
 if (isNaN(taxRate) || taxRate <= 0) {
-      alert('الرجاء إدخال نسبة ضريبة القيمة المضافة صحيحة.');
+      // alert('الرجاء إدخال نسبة ضريبة القيمة المضافة صحيحة.');
+//  لو مش محقق الشروط اللي فوق جعل الحقل احمر
+if (taxRateElement) {
+  if (taxRateElement.validity ) {
+    taxRateElement.style.border = '1px solid red'; // وضع border أحمر إذا كان الحقل غير صالح
+  }
+  // إزالة الـ border عند الكتابة في الحقل
+  taxRateElement.addEventListener('input', function() {
+    taxRateElement.style.border = ''; // إزالة الـ border عند الكتابة
+  });
+}
     //تصفير نتائج البحث 
       document.getElementById('result-total').value = 0;
       document.getElementById('result-tax').value = 0;
       document.getElementById('result-totalf').value = 0;
-      return;
+      
   }
+  return;
  }
+ 
  
 else {
   if (isNaN(totalValue) || totalValue <= 0) {
