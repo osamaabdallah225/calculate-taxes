@@ -140,7 +140,7 @@ outline: none;
     right: 3px !important;
    }
    .rate {
-    display: block;
+    display: block !important;
    }
   
 }
