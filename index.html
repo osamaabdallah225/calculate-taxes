@@ -18,21 +18,21 @@
             <form action="">
                 <div>
                     
-                    <input id="yes" type="radio" name="choice" checked onclick="myFunction()">
+                    <input id="yes" type="radio" name="choice" checked onclick="calculateTax()">
                     <label style="padding-left: 20px;" for="yes" >نعم</label>
-                    <input id="no" type="radio" name="choice" onclick="myFunction()">
+                    <input id="no" type="radio" name="choice" onclick="calculateTax()">
                     <label for="no">لا</label>
                 </div>
              
                 <p>القيمة الإجمالية</p>
-                <input  id="totalValue" type="number" required min="1" placeholder="ادخل القيمة" onkeyup="myFunction()" >
+                <input  id="totalValue" type="number" required min="1" placeholder=" ادخل القيمة"  onkeyup="calculateTax()"  >
                 <p >نسبة ضريبة القيمة المضافة (%)</p>
 
 
                <div class="rate" style="display: inline-block;position: relative;">
 
 
-                <input id="taxRate" type="number" required  min="1" placeholder="ادخل نسبة الضريبة" value="15" onkeyup="myFunction()"  >
+                <input id="taxRate" type="number" required  min="1" placeholder="ادخل نسبة الضريبة" value="15" onkeyup="calculateTax()"  >
                 <span style="position: absolute;left: 20px;top: 15px; font-weight: bold;">%</span>
                 
                </div>
@@ -41,7 +41,7 @@
                
              
                 <br>
-                <button id="button" type="button" onclick="calculateTax()" >عرض قيمة الضريبة</button>
+                <button id="button" type="button" onclick="calculateTax(true)" >عرض قيمة الضريبة</button>
             </form>
 
             <div id="result" style="margin-top: 30px;">
